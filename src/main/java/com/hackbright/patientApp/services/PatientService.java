@@ -1,7 +1,7 @@
 package com.hackbright.patientApp.services;
 
 import com.hackbright.patientApp.dtos.PatientDto;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 //import javax.transaction.Transactional;
 import java.util.List;
