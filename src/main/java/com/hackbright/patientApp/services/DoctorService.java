@@ -1,8 +1,9 @@
 package com.hackbright.patientApp.services;
 
 import com.hackbright.patientApp.dtos.DoctorDto;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
 import java.util.List;
 
 public interface DoctorService {

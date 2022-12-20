@@ -14,7 +14,7 @@
 	<name>patientApp</name>
 	<description>Spring Boot Capstone project for HackBright Academy</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
