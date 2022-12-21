@@ -23,7 +23,7 @@ public class Patient {
 
     @ManyToOne
     @JsonBackReference
-    private Patient patient;
+    private Doctor doctor;
 
     public Patient(PatientDto patientDto){
         if (patientDto.getBody() != null){
