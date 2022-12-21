@@ -2,11 +2,13 @@ package com.hackbright.patientApp.entities;
 
 import com.hackbright.patientApp.dtos.PatientDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+//import javax.persistence.*;
+import javax.print.Doc;
 
 @Entity
 @Table(name = "Patients")
@@ -23,6 +25,7 @@ public class Patient {
 
     @ManyToOne
     @JsonBackReference
+//    @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
     public Patient(PatientDto patientDto){
