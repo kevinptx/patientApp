@@ -15,6 +15,8 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    //have a get URL getPatients that returns all patients and a get URL that gets doctors and returns all doctors.
+    //It is patients for a given doctor.
     @GetMapping("/doctor/{doctorId}")
     public List<PatientDto> getPatientsByDoctor(@PathVariable Long doctorId){
         return patientService.getAllPatientsByDoctorId(doctorId);
@@ -30,7 +32,7 @@ public class PatientController {
         patientService.deletePatientById(patientId);
     }
 
-    @PutMapping
+    @PutMapping("/")
     public void updatePatient(@RequestBody PatientDto patientDto){
         patientService.updatePatientById(patientDto);
     }

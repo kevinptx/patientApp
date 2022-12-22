@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 //import javax.transaction.Transactional;
+import javax.print.Doc;
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -47,4 +49,12 @@ public class DoctorServiceImpl implements DoctorService {
         return response;
 
     }
+
+    public List<DoctorDto> getAllDoctors(){
+        List<Doctor> doctors = this.doctorRepository.findAll();
+        return doctors.stream().map(entity -> {
+            return new DoctorDto(entity);
+        }).toList();
+    }
+
 }

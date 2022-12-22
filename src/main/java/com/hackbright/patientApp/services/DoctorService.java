@@ -12,4 +12,6 @@ public interface DoctorService {
     List<String> addDoctor(DoctorDto doctorDto);
 
     List<String> doctorLogin(DoctorDto doctorDto);
+
+    List<DoctorDto> getAllDoctors();
 }

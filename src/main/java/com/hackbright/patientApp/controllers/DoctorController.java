@@ -1,13 +1,11 @@
 package com.hackbright.patientApp.controllers;
 
 import com.hackbright.patientApp.dtos.DoctorDto;
+import com.hackbright.patientApp.dtos.PatientDto;
 import com.hackbright.patientApp.services.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,10 @@ public class DoctorController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @GetMapping("")
+    public List<DoctorDto> getAllDoctors(){
+        return doctorService.getAllDoctors();
+    }
     @PostMapping("/register")
     public List<String> addDoctor(@RequestBody DoctorDto doctorDto){
         String passHash = passwordEncoder.encode(doctorDto.getPassword());
