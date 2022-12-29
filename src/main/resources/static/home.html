@@ -54,12 +54,24 @@ Figure out one and then copy and paste. Maybe add styling.-->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex">
-                <textarea class="form-control" rows="5" id="patient-firstName-edit"></textarea>
-                <textarea class="form-control" rows="5" id="patient-lastName-edit"></textarea>
-                <textarea class="form-control" rows="5" id="patient-age-edit"></textarea>
-                <textarea class="form-control" rows="5" id="patient-diagnosis-edit"></textarea>
-                <textarea class="form-control" rows="5" id="patient-prescriptions-edit"></textarea>
-                <textarea class="form-control" rows="5" id="patient-doctorNotes-edit"></textarea>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-firstName-edit"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-lastName-edit"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-age-edit"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-diagnosis-edit"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-prescriptions-edit"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="patient-doctorNotes-edit"></textarea>
+                </div>
             </div>
             <div class="modal-footer">
 <!--on close, find that HTML element, clear it and repopulate it w the DB info. call another function that is called which makes a call to the database on close.
