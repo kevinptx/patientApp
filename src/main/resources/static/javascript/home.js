@@ -7,12 +7,12 @@ const submitForm = document.getElementById("patient-form");
 const patientContainer = document.getElementById("patient-container");
 
 //Create Modal Elements
-let patientBody = document.getElementById("patient-age");
-let patientBody = document.getElementById("patient-firstName");
-let patientBody = document.getElementById("patient-lastName");
-let patientBody = document.getElementById("patient-diagnosis");
-let patientBody = document.getElementById("patient-prescriptions");
-let patientBody = document.getElementById("patient-doctorNotes");
+let patientAge = document.getElementById("patient-age");
+let patientFirstName = document.getElementById("patient-firstName");
+let patientLastName = document.getElementById("patient-lastName");
+let patientDiagnosis = document.getElementById("patient-diagnosis");
+let patientPrescriptions = document.getElementById("patient-prescriptions");
+let patientDoctorNotes = document.getElementById("patient-doctorNotes");
 
 
 let updatePatientBtn = document.getElementById("update-patient-button");
@@ -115,7 +115,12 @@ const createPatientCards = (array) => {
         patientCard.innerHTML = `
             <div class="card d-flex" style="width: 18rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    <p class="card-text">${obj.body}</p>
+                    <p class="card-text">${obj.firstName}</p>
+                    <p class="card-text">${obj.lastName}</p>
+                    <p class="card-text">${obj.age}</p>
+                    <p class="card-text">${obj.diagnosis}</p>
+                    <p class="card-text">${obj.prescriptions}</p>
+                    <p class="card-text">${obj.doctorNotes}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
                         <button onclick="getPatientById(${obj.id})" type="button" class="btn btn-primary"
@@ -137,8 +142,18 @@ function handleLogout(){
 }
 
 const populateModal = (obj) =>{
-    patientBody.innerText = ''
-    patientBody.innerText = obj.body
+    patientFirstName.innerText = ''
+    patientLastName.innerText = ''
+    patientAge.innerText = ''
+    patientDiagnosis.innerText = ''
+    patientPrescriptions.innerText = ''
+    patientDoctorNotes.innerText = ''
+    patientFirstName.innerText = obj.firstName
+    patientLastName.innerText = obj.lastName
+    patientAge.innerText = obj.age
+    patientDiagnosis.innerText = obj.diagnosis
+    patientPrescriptions.innerText = obj.prescriptions
+    patientDoctorNotes.innerText = obj.doctorNotes
     updatePatientBtn.setAttribute('data-patient-id', obj.id)
 }
 getPatients(doctorId);
