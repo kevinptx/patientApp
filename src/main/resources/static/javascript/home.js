@@ -7,7 +7,14 @@ const submitForm = document.getElementById("patient-form");
 const patientContainer = document.getElementById("patient-container");
 
 //Create Modal Elements
-let patientBody = document.getElementById("patient-body");
+let patientBody = document.getElementById("patient-age");
+let patientBody = document.getElementById("patient-firstName");
+let patientBody = document.getElementById("patient-lastName");
+let patientBody = document.getElementById("patient-diagnosis");
+let patientBody = document.getElementById("patient-prescriptions");
+let patientBody = document.getElementById("patient-doctorNotes");
+
+
 let updatePatientBtn = document.getElementById("update-patient-button");
 
 const headers = {
