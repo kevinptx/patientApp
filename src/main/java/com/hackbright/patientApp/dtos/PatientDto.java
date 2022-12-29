@@ -12,15 +12,38 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class PatientDto implements Serializable {
     private Long id;
-    private String body;
+    private String diagnosis;
+    private String doctorNotes;
+    private String prescriptions;
+    private String firstName;
+    private String lastName;
+    private Integer age;
     private DoctorDto doctorDto;
 
     public PatientDto(Patient patient){
         if (patient.getId() != null){
             this.id = patient.getId();
         }
-        if (patient.getBody() != null){
-            this.body = patient.getBody();
+//        if (patient.getBody() != null){
+//            this.body = patient.getBody();
+//        }
+        if (patient.getDiagnosis() != null){
+            this.diagnosis = patient.getDiagnosis();
+        }
+        if (patient.getDoctor() != null){
+            this.doctorNotes = patient.getDoctorNotes();
+        }
+        if (patient.getDoctor() != null){
+            this.prescriptions = patient.getPrescriptions();
+        }
+        if (patient.getFirstName() != null){
+            this.firstName = patient.getFirstName();
+        }
+        if (patient.getLastName() != null){
+            this.lastName = patient.getLastName();
+        }
+        if (patient.getAge() != null){
+            this.age = patient.getAge();
         }
     }
 }

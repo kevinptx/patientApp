@@ -15,11 +15,23 @@ const headers = {
 }
 
 const baseUrl = "http://localhost:8080/api/v1/patients/"
+//make sure that the name matches what you have in the DTO. If doesn't match, it won't go through and will be empty. On the DTO, there was a field
+//called body. That's how it maps each of the objects inside. If you pass multiple things, it may not know what belongs to what, so make sure
+//the name matches. InputValidation: make sure password d/n have letter, uppercase, etc...(These are not necessary-these are nice to haves)
+//On name, someone can type numbers instead of a name, but this is more advanced nice to haves...get it working first.
 
+//Some had their connections on the data model set up incorrectly and when they reached the front end, some of the issues
+// resurface and this requires refactoring on the backend. Try to work on front end and get it presentable.
+//
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
-        body: document.getElementById("patient-input").value
+        age: document.getElementById("patient-age").value
+        firstName: document.getElementById("patient-firstName").value
+        lastName: document.getElementById("patient-lastName").value
+        prescriptions: document.getElementById("patient-prescriptions").value
+        doctorNotes: document.getElementById("patient-doctorNotes").value
+        diagnosis: document.getElementById("patient-diagnosis").value
     }
     await addPatient(bodyObj);
     document.getElementById("patient-input").value = '';
@@ -117,7 +129,6 @@ const populateModal = (obj) =>{
     patientBody.innerText = obj.body
     updatePatientBtn.setAttribute('data-patient-id', obj.id)
 }
-
 getPatients(doctorId);
 
 submitForm.addEventListener("submit", handleSubmit)
