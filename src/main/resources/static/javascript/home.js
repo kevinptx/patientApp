@@ -6,13 +6,13 @@ const doctorId = cookieArr[1];
 const submitForm = document.getElementById("patient-form");
 const patientContainer = document.getElementById("patient-container");
 
-//Create Modal Elements
-let patientAge = document.getElementById("patient-age");
-let patientFirstName = document.getElementById("patient-firstName");
-let patientLastName = document.getElementById("patient-lastName");
-let patientDiagnosis = document.getElementById("patient-diagnosis");
-let patientPrescriptions = document.getElementById("patient-prescriptions");
-let patientDoctorNotes = document.getElementById("patient-doctorNotes");
+//Create Modal Elements - these are for the Modal. These are for editing
+let patientAge = document.getElementById("patient-age-edit");
+let patientFirstName = document.getElementById("patient-firstName-edit");
+let patientLastName = document.getElementById("patient-lastName-edit");
+let patientDiagnosis = document.getElementById("patient-diagnosis-edit");
+let patientPrescriptions = document.getElementById("patient-prescriptions-edit");
+let patientDoctorNotes = document.getElementById("patient-doctorNotes-edit");
 
 
 let updatePatientBtn = document.getElementById("update-patient-button");
@@ -33,6 +33,7 @@ const baseUrl = "http://localhost:8080/api/v1/patients/"
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
+    //these are for creating on the homepage
         age: document.getElementById("patient-age").value,
         firstName: document.getElementById("patient-firstName").value,
         lastName: document.getElementById("patient-lastName").value,
