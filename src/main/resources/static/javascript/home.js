@@ -34,7 +34,12 @@ const handleSubmit = async (e) => {
         diagnosis: document.getElementById("patient-diagnosis").value
     }
     await addPatient(bodyObj);
-    document.getElementById("patient-input").value = '';
+    document.getElementById("patient-age").value = '';
+    document.getElementById("patient-firstName").value = '';
+    document.getElementById("patient-lastName").value = '';
+    document.getElementById("patient-prescriptions").value = '';
+    document.getElementById("patient-doctorNotes").value = '';
+    document.getElementById("patient-diagnosis").value = '';
 }
 
 async function addPatient(obj) {
