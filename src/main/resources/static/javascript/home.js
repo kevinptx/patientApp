@@ -33,11 +33,11 @@ const baseUrl = "http://localhost:8080/api/v1/patients/"
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
-        age: document.getElementById("patient-age").value
-        firstName: document.getElementById("patient-firstName").value
-        lastName: document.getElementById("patient-lastName").value
-        prescriptions: document.getElementById("patient-prescriptions").value
-        doctorNotes: document.getElementById("patient-doctorNotes").value
+        age: document.getElementById("patient-age").value,
+        firstName: document.getElementById("patient-firstName").value,
+        lastName: document.getElementById("patient-lastName").value,
+        prescriptions: document.getElementById("patient-prescriptions").value,
+        doctorNotes: document.getElementById("patient-doctorNotes").value,
         diagnosis: document.getElementById("patient-diagnosis").value
     }
     await addPatient(bodyObj);
