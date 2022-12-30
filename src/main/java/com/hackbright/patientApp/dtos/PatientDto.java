@@ -24,9 +24,6 @@ public class PatientDto implements Serializable {
         if (patient.getId() != null){
             this.id = patient.getId();
         }
-//        if (patient.getBody() != null){
-//            this.body = patient.getBody();
-//        }
         if (patient.getDiagnosis() != null){
             this.diagnosis = patient.getDiagnosis();
         }
@@ -45,5 +42,8 @@ public class PatientDto implements Serializable {
         if (patient.getAge() != null){
             this.age = patient.getAge();
         }
+        this.doctorDto = new DoctorDto();
+        this.doctorDto.setDoctorname(patient.getDoctor().getDoctorname());
+        this.doctorDto.setId(patient.getDoctor().getId());
     }
 }
