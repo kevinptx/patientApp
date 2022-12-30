@@ -69,7 +69,7 @@ public class Patient {
         if (patientDto.getPrescriptions() != null){
             this.prescriptions = patientDto.getPrescriptions();
         }
-        if (patientDto.getDoctorDto() != null){
+        if (patientDto.getDoctorNotes() != null){
             this.doctorNotes = patientDto.getDoctorNotes();
         }
     }
