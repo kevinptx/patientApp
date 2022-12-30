@@ -30,10 +30,10 @@ public class PatientDto implements Serializable {
         if (patient.getDiagnosis() != null){
             this.diagnosis = patient.getDiagnosis();
         }
-        if (patient.getDoctor() != null){
+        if (patient.getDoctorNotes() != null){
             this.doctorNotes = patient.getDoctorNotes();
         }
-        if (patient.getDoctor() != null){
+        if (patient.getPrescriptions() != null){
             this.prescriptions = patient.getPrescriptions();
         }
         if (patient.getFirstName() != null){
