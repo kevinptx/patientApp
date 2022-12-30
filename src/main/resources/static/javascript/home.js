@@ -95,14 +95,14 @@ async function getPatientById(patientId){
 async function handlePatientEdit(patientId){
     let bodyObj = {
         id: patientId,
-        patientAge: patientAge.value,
-        patientFirstName: patientFirstName.value,
-        patientLastName: patientLastName.value,
-        patientDiagnosis: patientDiagnosis.value,
-        patientPrescriptions: patientPrescriptions.value,
-        patientDoctorNotes: patientDoctorNotes.value
+        age: patientAge.value,
+        firstName: patientFirstName.value,
+        lastName: patientLastName.value,
+        diagnosis: patientDiagnosis.value,
+        prescriptions: patientPrescriptions.value,
+        doctorNotes: patientDoctorNotes.value
     }
-
+console.log("BodyObject:", bodyObj);
     await fetch(baseUrl, {
         method: "PUT",
         body: JSON.stringify(bodyObj),
