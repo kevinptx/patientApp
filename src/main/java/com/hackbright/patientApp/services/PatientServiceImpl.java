@@ -53,7 +53,6 @@ public class PatientServiceImpl implements PatientService {
     public void updatePatientById(PatientDto patientDto) {
         Optional<Patient> patientOptional = patientRepository.findById(patientDto.getId());
         patientOptional.ifPresent(patient -> {
-//            patient.setBody(patientDto.getBody());
             patient.setAge(patientDto.getAge());
             patient.setFirstName(patientDto.getFirstName());
             patient.setLastName(patientDto.getLastName());
