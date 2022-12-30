@@ -95,7 +95,12 @@ async function getPatientById(patientId){
 async function handlePatientEdit(patientId){
     let bodyObj = {
         id: patientId,
-        body: patientBody.value
+        patientAge: patientAge.value,
+        patientFirstName: patientFirstName.value,
+        patientLastName: patientLastName.value,
+        patientDiagnosis: patientDiagnosis.value,
+        patientPrescriptions: patientPrescriptions.value,
+        patientDoctorNotes: patientDoctorNotes.value
     }
 
     await fetch(baseUrl, {
