@@ -102,7 +102,7 @@ async function handlePatientEdit(patientId){
         prescriptions: patientPrescriptions.value,
         doctorNotes: patientDoctorNotes.value
     }
-console.log("BodyObject:", bodyObj);
+
     await fetch(baseUrl, {
         method: "PUT",
         body: JSON.stringify(bodyObj),
@@ -140,6 +140,7 @@ const createPatientCards = (array) => {
         patientContainer.append(patientCard);
     })
 }
+
 function handleLogout(){
     let c = document.cookie.split(";");
     for(let i in c){
@@ -170,3 +171,94 @@ updatePatientBtn.addEventListener("click", (e)=>{
     let patientId = e.target.getAttribute('data-patient-id')
     handlePatientEdit(patientId);
 })
+
+//work with the OpenFDA API:
+
+const searchInput = document.querySelector('#search-input');
+const searchButton = document.getElementById('search-button');
+const resultsDropdown = document.querySelector('#results-dropdown');
+const apiUrl = 'https://api.fda.gov/drug/label.json?search=';
+
+//on dropdown maybe have a prepopulated field with some of the most common medicines.
+//then give them a choice and once selected, fetch description from API and show it.
+
+async function fetchFromApi(selectedOption){
+console.log("logging selectedOption in fetchFromAPI function", selectedOption)
+await fetch(apiUrl + selectedOption)
+  .then(response => response.json())
+  .then(data => {
+  console.log("Data:", data);
+  console.log("Data.results:", data.results);
+    data.results.forEach(result => {
+      const option = document.createElement('option');
+      option.value = result.id;
+      option.text = result.name;
+      resultsDropdown.add(option);
+    });
+  });
+}
+
+//searchButton.addEventListener('click', async () => {
+//console.log("Clicked search button")
+//  const searchTerm = searchInput.value;
+//  //I'll no longer be using a search term but the dropdown. Edit for that.
+//     await fetchFromApi(searchTerm);
+//});
+
+//this is for the dropdown
+const patientPrescriptionsDisplay = document.querySelector('#patient-prescriptions');
+//const selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex];
+//console.log("selectedOption Outside/Global", selectedOption)
+
+resultsDropdown.addEventListener('change', async () => {
+console.log("Dropdown listener clicked")
+const selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex].value;
+  //call the api with the selected option.
+await fetchFromApi(selectedOption)
+console.log("selectedOption", selectedOption)
+  //patientPrescriptionsDisplay.value += selectedOption.text + '\n';
+});
+
+//how to iterate over the common drugs list (for loop) and then for each of those, you append the child
+//to the dropdown menu. There's a specific way to do that, connecting to the HTML.
+//once those are added, you need the event listener to detect the one selected.
+//from there, you do the API call (fetch) and populate the <p> tag with the specific fields
+//that you drilled into using dot notation. Once you have list with the fields, select the ones you want
+//and format it on the HTML.
+const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorphone", "Metformin", "Methylergonovine", "Methotrexate ",
+    "Gabapentin", "Nitroglycerin", "Oxytocin", "Pantoprazole", "Risperidone", "Methylprednisolone", "Budesonide", "Levothyroxine",
+    "Vancomycin", "Piperacillin", "Clopidogrel", "Lithium", "Haloperidol", "Zolpidem", "Esomeprazole", "Amiodarone", "Aripiprazole",
+    "Epoetin", "Risedronate", "Pregabalin", "Aspart", "Diltiazem", "Varenicline", "Furosemide", "Levofloxacin", "Atorvastatin",
+    "Sildenafil", "Sertraline", "Fentanyl", "Fluticasone", "Propranolol", "Donepezil", "Lisinopril", "Rifampin", "Enoxaparin",
+    "Adenosine", "Dutasteride", "Warfarin", "Phenytoin", "Metronidazole", "Gentamicin", "Digoxin", "Memantine", "Oxycodone",
+    "Montelukast"
+ ];
+
+ for (let i = 0; i < commonDrugsList.length; i++) {
+   let option = document.createElement("option");
+   option.value = commonDrugsList[i];
+   option.text = commonDrugsList[i];
+   resultsDropdown.appendChild(option);
+ }
+
+//appending the fields from the API fetch to the p tag.
+const createDrugFieldData = (array) => {
+    patientPrescriptionsDisplay.innerHTML = ''
+    array.forEach(obj => {
+        patientPrescriptionsDisplay.innerHTML = `
+            <div class="card d-flex" style="width: 18rem; height: 18rem;">
+                <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
+                    <p class="lh-lg">${obj.adverse_reactions}</p>
+                    <p class="lh-lg">${obj.contraindications}</p>
+                    </div>
+                </div>
+            </div>
+        `
+        patientContainer.append(patientCard);
+    })
+}
+
+//Initialize Datepicker:
+  $(function() {
+            $('#datepicker').datepicker();
+            });
