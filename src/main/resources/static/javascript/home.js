@@ -186,16 +186,16 @@ async function fetchFromApi(selectedOption){
 console.log("logging selectedOption in fetchFromAPI function", selectedOption)
 await fetch(apiUrl + selectedOption)
   .then(response => response.json())
-  .then(data => {
-  console.log("Data:", data);
-  console.log("Data.results:", data.results);
-    data.results.forEach(result => {
-      const option = document.createElement('option');
-      option.value = result.id;
-      option.text = result.name;
-      resultsDropdown.add(option);
-    });
-  });
+  .then(data => console.log("Data.results:", data.results))
+  .then(data => createDrugFieldData(data.results))
+//  .then(data => {
+//    data.results.forEach(result => {
+//      const option = document.createElement('option');
+//      option.value = result.id;
+//      option.text = result.name;
+//      resultsDropdown.add(patientPrescriptionsDisplay);
+//    });
+//  });
 }
 
 //searchButton.addEventListener('click', async () => {
@@ -245,18 +245,21 @@ const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorph
 const createDrugFieldData = (array) => {
     patientPrescriptionsDisplay.innerHTML = ''
     array.forEach(obj => {
-        patientPrescriptionsDisplay.innerHTML = `
-            <div class="card d-flex" style="width: 18rem; height: 18rem;">
-                <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
+        let drugFields = document.createElement("div")
+        //limit adverse reactions to a limited extendable textarea or p tag or other element.
+        drugFields.innerHTML = `
+                    <div>
                     <p class="lh-lg">${obj.adverse_reactions}</p>
                     <p class="lh-lg">${obj.contraindications}</p>
+                    <p class="lh-lg">${obj.drug_interactions}</p>
                     </div>
                 </div>
             </div>
         `
-        patientContainer.append(patientCard);
+        patientPrescriptionsDisplay.append(drugFields);
     })
 }
+
 
 //Initialize Datepicker:
   $(function() {
