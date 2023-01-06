@@ -48,11 +48,6 @@ public class Patient {
 //    @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
-//    public Patient(PatientDto patientDto){
-//        if (patientDto.getBody() != null){
-//            this.body = patientDto.getBody();
-//        }
-
     public Patient(PatientDto patientDto){
         if (patientDto.getFirstName() != null){
             this.firstName = patientDto.getFirstName();

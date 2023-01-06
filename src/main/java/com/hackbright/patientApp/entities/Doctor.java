@@ -34,14 +34,7 @@ public class Doctor {
     @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JsonManagedReference
     private Set<Patient> patientSet = new HashSet<>();
-//need additional column for type (Either a doctor or patient and this needs to be specified)
-    //Note app, you login and notes are based on which user you are.
-    //this one needs a certain set of info displayed depending on whether doctor or patient
-    //add a new column can be string with the value "doctor" or "patient". This needs to be consistent throughout
-    //the entire app. This will be a normal column value like "password". You will have a new string
-    //value called "type" for example. User is the entity. Patient and doctor are just specific fields
-    //in that entity.
-    //Do it just like the Notes app: Users will be doctors table. and notes table should be patients table.
+    //Do it just like the Notes app: Users will be doctors table and notes table should be patients table.
     //we want oneToMany mapping between doctors and patients. Only the doctors will login at this point. Login as Dr
     //to access list of pts. Very much like notes app.
     public Doctor(DoctorDto doctorDto){
