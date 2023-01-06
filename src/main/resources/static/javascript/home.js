@@ -261,7 +261,7 @@ const createDrugFieldData = (array) => {
 }
 
 
-//Initialize Datepicker:
-  $(function() {
-            $('#datepicker').datepicker();
-            });
+//Initialize Datepicker (to be done later if time permits):
+//  $(function() {
+//            $('#datepicker').datepicker();
+//            });

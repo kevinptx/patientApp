@@ -19,10 +19,10 @@ public class PatientDto implements Serializable {
     private String lastName;
     private Integer age;
 
-    //private Date appointment;
-//private static final FastDateFormat dateFormat = FastDateFormat.getInstance("yyyy-MM-dd'T'HH:mm:ss");
-//String pattern = "EEEEE MMMMM yyyy HH:mm:ss.SSSZ";
-    //String pattern = "EEE, dd MMM yyyy HH:mm:ss Z"
+//    private Date appointment;
+//    private static final FastDateFormat dateFormat = FastDateFormat.getInstance("yyyy-MM-dd'T'HH:mm:ss");
+//    String pattern = "EEEEE MMMMM yyyy HH:mm:ss.SSSZ";
+//    String pattern = "EEE, dd MMM yyyy HH:mm:ss Z";
 
     //FastDateFormat fdf = FastDateFormat.getInstance(PATTERN, TimeZone.getTimeZone("UTC"));
     //When you put a date object in the app, you may have to do conversion and set
