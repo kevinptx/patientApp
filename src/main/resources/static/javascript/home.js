@@ -22,10 +22,9 @@ const headers = {
 }
 
 const baseUrl = "http://localhost:8080/api/v1/patients/"
-//make sure that the name matches what you have in the DTO. If doesn't match, it won't go through and will be empty. On the DTO, there was a field
-//called body. That's how it maps each of the objects inside. If you pass multiple things, it may not know what belongs to what, so make sure
-//the name matches. InputValidation: make sure password d/n have letter, uppercase, etc...(These are not necessary-these are nice to haves)
-//On name, someone can type numbers instead of a name, but this is more advanced nice to haves...get it working first.
+
+//InputValidation: make sure password d/n have letter, uppercase, etc...(These are not necessary-these are nice to haves)
+//On name, someone can type numbers instead of a name, but this is a more advanced nice to have...get it working first.
 
 //Some had their connections on the data model set up incorrectly and when they reached the front end, some of the issues
 // resurface and this requires refactoring on the backend. Try to work on front end and get it presentable.
@@ -179,9 +178,6 @@ const searchButton = document.getElementById('search-button');
 const resultsDropdown = document.querySelector('#results-dropdown');
 const apiUrl = 'https://api.fda.gov/drug/label.json?search=';
 
-//on dropdown maybe have a prepopulated field with some of the most common medicines.
-//then give them a choice and once selected, fetch description from API and show it.
-
 async function fetchFromApi(selectedOption){
 console.log("logging selectedOption in fetchFromAPI function", selectedOption)
 await fetch(apiUrl + selectedOption)
@@ -198,17 +194,9 @@ await fetch(apiUrl + selectedOption)
 //  });
 }
 
-//searchButton.addEventListener('click', async () => {
-//console.log("Clicked search button")
-//  const searchTerm = searchInput.value;
-//  //I'll no longer be using a search term but the dropdown. Edit for that.
-//     await fetchFromApi(searchTerm);
-//});
 
 //this is for the dropdown
 const patientPrescriptionsDisplay = document.querySelector('#patient-prescriptions');
-//const selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex];
-//console.log("selectedOption Outside/Global", selectedOption)
 
 resultsDropdown.addEventListener('change', async () => {
 console.log("Dropdown listener clicked")
@@ -216,15 +204,8 @@ const selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex].va
   //call the api with the selected option.
 await fetchFromApi(selectedOption)
 console.log("selectedOption", selectedOption)
-  //patientPrescriptionsDisplay.value += selectedOption.text + '\n';
 });
 
-//how to iterate over the common drugs list (for loop) and then for each of those, you append the child
-//to the dropdown menu. There's a specific way to do that, connecting to the HTML.
-//once those are added, you need the event listener to detect the one selected.
-//from there, you do the API call (fetch) and populate the <p> tag with the specific fields
-//that you drilled into using dot notation. Once you have list with the fields, select the ones you want
-//and format it on the HTML.
 const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorphone", "Metformin", "Methylergonovine", "Methotrexate ",
     "Gabapentin", "Nitroglycerin", "Oxytocin", "Pantoprazole", "Risperidone", "Methylprednisolone", "Budesonide", "Levothyroxine",
     "Vancomycin", "Piperacillin", "Clopidogrel", "Lithium", "Haloperidol", "Zolpidem", "Esomeprazole", "Amiodarone", "Aripiprazole",
@@ -234,6 +215,7 @@ const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorph
     "Montelukast"
  ];
 
+//this is populating the dropdown with the above array, commonDrugList
  for (let i = 0; i < commonDrugsList.length; i++) {
    let option = document.createElement("option");
    option.value = commonDrugsList[i];
