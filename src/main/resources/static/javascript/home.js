@@ -124,7 +124,7 @@ const createPatientCards = (array) => {
                     <p class="card-text">${obj.lastName}</p>
                     <p class="card-text">${obj.age}</p>
                     <p class="card-text">${obj.diagnosis}</p>
-                    <p class="card-text">${obj.prescriptions}</p>
+//                    <p class="card-text">${obj.prescriptions}</p>
                     <p class="card-text">${obj.doctorNotes}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
