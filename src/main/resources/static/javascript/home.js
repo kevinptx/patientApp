@@ -124,7 +124,6 @@ const createPatientCards = (array) => {
                     <p class="card-text">${obj.lastName}</p>
                     <p class="card-text">${obj.age}</p>
                     <p class="card-text">${obj.diagnosis}</p>
-//                    <p class="card-text">${obj.prescriptions}</p>
                     <p class="card-text">${obj.doctorNotes}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
@@ -182,7 +181,7 @@ async function fetchFromApi(selectedOption){
 console.log("logging selectedOption in fetchFromAPI function", selectedOption)
 await fetch(apiUrl + selectedOption)
   .then(response => response.json())
-  .then(data => console.log("Data.results:", data.results))
+//  .then(data => console.log("Data.results:", data.results))
   .then(data => createDrugFieldData(data.results))
 //  .then(data => {
 //    data.results.forEach(result => {
@@ -195,7 +194,7 @@ await fetch(apiUrl + selectedOption)
 }
 
 
-//this is for the dropdown
+//this is for the p tag where the drug info is populated
 const patientPrescriptionsDisplay = document.querySelector('#patient-prescriptions');
 
 resultsDropdown.addEventListener('change', async () => {
@@ -225,22 +224,57 @@ const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorph
 
 //appending the fields from the API fetch to the p tag.
 const createDrugFieldData = (array) => {
+console.log("logging array in CreateDrugFieldData", array)
     patientPrescriptionsDisplay.innerHTML = ''
     array.forEach(obj => {
         let drugFields = document.createElement("div")
-        //limit adverse reactions to a limited extendable textarea or p tag or other element.
         drugFields.innerHTML = `
-                    <div>
-                    <p class="lh-lg">${obj.adverse_reactions}</p>
-                    <p class="lh-lg">${obj.contraindications}</p>
-                    <p class="lh-lg">${obj.drug_interactions}</p>
-                    </div>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Click to Expand Adverse Reactions
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  <p>${obj.adverse_reactions}</p>
+                  </div>
                 </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Click to Expand Drug Contraindications
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  <p>${obj.contraindications}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Click to Expand Drug Interactions
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  <p>${obj.drug_interactions}</p>
+                  </div>
+                </div>
+              </div>
             </div>
         `
         patientPrescriptionsDisplay.append(drugFields);
     })
 }
+
+
+
+//working example
 
 
 //Initialize Datepicker (to be done later if time permits):

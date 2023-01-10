@@ -1,0 +1,10 @@
+.expandable {
+  overflow: hidden;
+  max-height: 50px;
+  transition: max-height 0.5s ease-out;
+}
+
+.expanded {
+  max-height: 10000px;
+}
+
