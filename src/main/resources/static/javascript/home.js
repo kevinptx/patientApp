@@ -26,9 +26,6 @@ const baseUrl = "http://localhost:8080/api/v1/patients/"
 //InputValidation: make sure password d/n have letter, uppercase, etc...(These are not necessary-these are nice to haves)
 //On name, someone can type numbers instead of a name, but this is a more advanced nice to have...get it working first.
 
-//Some had their connections on the data model set up incorrectly and when they reached the front end, some of the issues
-// resurface and this requires refactoring on the backend. Try to work on front end and get it presentable.
-//
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
@@ -124,6 +121,7 @@ const createPatientCards = (array) => {
                     <p class="card-text">${obj.lastName}</p>
                     <p class="card-text">${obj.age}</p>
                     <p class="card-text">${obj.diagnosis}</p>
+                    <p class="card-text">${obj.prescriptions}</p>
                     <p class="card-text">${obj.doctorNotes}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
