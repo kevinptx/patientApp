@@ -6,6 +6,9 @@ const doctorId = cookieArr[1];
 const submitForm = document.getElementById("patient-form");
 const patientContainer = document.getElementById("patient-container");
 
+// Creating the selectedOption so that the drug name can be saved from the dropdown menu selection and added to the DB:
+let selectedOption = "";
+
 //Create Modal Elements - these are for the Modal. These are for editing
 let patientAge = document.getElementById("patient-age-edit");
 let patientFirstName = document.getElementById("patient-firstName-edit");
@@ -33,7 +36,8 @@ const handleSubmit = async (e) => {
         age: document.getElementById("patient-age").value,
         firstName: document.getElementById("patient-firstName").value,
         lastName: document.getElementById("patient-lastName").value,
-        prescriptions: document.getElementById("patient-prescriptions").value,
+        prescriptions: selectedOption,
+//        prescriptions: document.getElementById("patient-prescriptions").value,
         doctorNotes: document.getElementById("patient-doctorNotes").value,
         diagnosis: document.getElementById("patient-diagnosis").value
     }
@@ -41,7 +45,8 @@ const handleSubmit = async (e) => {
     document.getElementById("patient-age").value = '';
     document.getElementById("patient-firstName").value = '';
     document.getElementById("patient-lastName").value = '';
-    document.getElementById("patient-prescriptions").value = '';
+    document.getElementById("patient-prescriptions").innerHTML = '';
+    resultsDropdown.selectedIndex = 0;
     document.getElementById("patient-doctorNotes").value = '';
     document.getElementById("patient-diagnosis").value = '';
 }
@@ -197,13 +202,13 @@ const patientPrescriptionsDisplay = document.querySelector('#patient-prescriptio
 
 resultsDropdown.addEventListener('change', async () => {
 console.log("Dropdown listener clicked")
-const selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex].value;
+selectedOption = resultsDropdown.options[resultsDropdown.selectedIndex].value;
   //call the api with the selected option.
 await fetchFromApi(selectedOption)
 console.log("selectedOption", selectedOption)
 });
 
-const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorphone", "Metformin", "Methylergonovine", "Methotrexate ",
+const commonDrugsList = ["Select Medication From Dropdown Menu:", "Aspirin", "Penicillin", "Insulin detemir", "Hydromorphone", "Metformin", "Methylergonovine", "Methotrexate ",
     "Gabapentin", "Nitroglycerin", "Oxytocin", "Pantoprazole", "Risperidone", "Methylprednisolone", "Budesonide", "Levothyroxine",
     "Vancomycin", "Piperacillin", "Clopidogrel", "Lithium", "Haloperidol", "Zolpidem", "Esomeprazole", "Amiodarone", "Aripiprazole",
     "Epoetin", "Risedronate", "Pregabalin", "Aspart", "Diltiazem", "Varenicline", "Furosemide", "Levofloxacin", "Atorvastatin",
@@ -223,56 +228,149 @@ const commonDrugsList = ["Aspirin", "Penicillin", "Insulin detemir", "Hydromorph
 //appending the fields from the API fetch to the p tag.
 const createDrugFieldData = (array) => {
 console.log("logging array in CreateDrugFieldData", array)
-    patientPrescriptionsDisplay.innerHTML = ''
-    array.forEach(obj => {
-        let drugFields = document.createElement("div")
-        drugFields.innerHTML = `
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Click to Expand Adverse Reactions
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                  <p>${obj.adverse_reactions}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Click to Expand Drug Contraindications
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                  <p>${obj.contraindications}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Click to Expand Drug Interactions
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                  <p>${obj.drug_interactions}</p>
-                  </div>
-                </div>
-              </div>
+patientPrescriptionsDisplay.innerHTML = ''
+array.forEach(obj => {
+let drugFields = document.createElement("div")
+drugFields.innerHTML = `
+<div class="accordion d-grid gap-3" id="accordionExample">
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Click to Expand Adverse Reactions
+        </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>${obj.adverse_reactions}</p>
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Click to Expand Drug Contraindications
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>${obj.contraindications}</p>
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    Click to Expand Drug Interactions
+    </button>
+</h2>
+<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.drug_interactions}</p>
+    </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFour">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+    Click to Expand Drug Indications and Usages
+    </button>
+</h2>
+<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.indications_and_usage}</p>
+    </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFive">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+    Click to Expand Drug Adverse Reactions
+    </button>
+</h2>
+<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.adverse_reactions}</p>
+    </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingSix">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+    Click to Expand Drug Dosage and Administration
+    </button>
+</h2>
+<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.dosage_and_administration}</p>
+    </div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingSeven">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+    Click to Expand Drug Information for Patients
+    </button>
+</h2>
+<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.information_for_patients}</p>
+    </div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingEight">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+    Click to Expand Drug Description
+    </button>
+</h2>
+<div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <p>${obj.description}</p>
+    </div>
+</div>
+</div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Click to Expand Pregnancy Category and/or View Potential Teratogenic Effects
+        </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>${obj.pregnancy || obj.teratogenic_effects}</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            Click to Expand Drug Warnings and Precautions
+            </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>${obj.warnings_and_cautions || obj.warnings}</p>
             </div>
-        `
-        patientPrescriptionsDisplay.append(drugFields);
-    })
+        </div>
+    </div>
+
+</div>
+`
+patientPrescriptionsDisplay.append(drugFields);
+})
 }
 
 
 
-//working example
+
 
 
 //Initialize Datepicker (to be done later if time permits):
