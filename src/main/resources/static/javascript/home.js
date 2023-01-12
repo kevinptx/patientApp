@@ -284,12 +284,12 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingFive">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Adverse Reactions
+            Mechanism of Action
     </button>
 		</h2>
 		<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
 			<div class="accordion-body">
-				<p>${obj.adverse_reactions}</p>
+				<p>${obj.mechanism_of_action}</p>
 			</div>
 		</div>
 	</div>
