@@ -235,11 +235,11 @@ drugFields.innerHTML = `
 <div class="accordion d-grid gap-3" id="accordionExample">
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingOne">
-			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        Click to Expand Adverse Reactions
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+			Adverse Reactions
         </button>
 		</h2>
-		<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+		<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 			<div class="accordion-body">
 				<p>${obj.adverse_reactions}</p>
 			</div>
@@ -248,7 +248,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingTwo">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Click to Expand Drug Contraindications
+            Contraindications
         </button>
 		</h2>
 		<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -260,7 +260,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingThree">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-    Click to Expand Drug Interactions
+            Drug Interactions
     </button>
 		</h2>
 		<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -272,7 +272,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingFour">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-    Click to Expand Drug Indications and Usages
+            Indications and Usages
     </button>
 		</h2>
 		<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -284,7 +284,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingFive">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-    Click to Expand Drug Adverse Reactions
+            Adverse Reactions
     </button>
 		</h2>
 		<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
@@ -296,7 +296,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingSix">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-    Click to Expand Drug Dosage and Administration
+            Dosage and Administration
     </button>
 		</h2>
 		<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
@@ -308,7 +308,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingSeven">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-    Click to Expand Drug Information for Patients
+            Information for Patients
     </button>
 		</h2>
 		<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
@@ -320,7 +320,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingEight">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-    Click to Expand Drug Description
+            Description
     </button>
 		</h2>
 		<div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -332,7 +332,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingNine">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-        Click to Expand Pregnancy Category and/or View Potential Teratogenic Effects
+            Pregnancy Category and/or Teratogenic Effects
         </button>
 		</h2>
 		<div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
@@ -344,7 +344,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
 		<h2 class="accordion-header" id="headingTen">
 			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-            Click to Expand Drug Warnings and Precautions
+            Warnings and Precautions
             </button>
 		</h2>
 		<div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
@@ -356,7 +356,7 @@ drugFields.innerHTML = `
 	<div class="accordion-item">
     		<h2 class="accordion-header" id="headingEleven">
     			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                Click to Expand Boxed Warnings
+                Boxed Warnings
                 </button>
     		</h2>
     		<div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
@@ -370,6 +370,20 @@ drugFields.innerHTML = `
 patientPrescriptionsDisplay.append(drugFields);
 })
 }
+
+const accordionItems = document.querySelectorAll('.accordion-collapse')
+const acc = document.getElementById('accordionExample')
+
+accordionItems.forEach((el)=>{
+    el.addEventListener('shown.bs.collapse',(e)=>{
+        var scrollOffset = acc.scrollTop + el.parentNode.offsetTop
+        acc.scroll({
+            top: scrollOffset,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })
+})
 
 
 
