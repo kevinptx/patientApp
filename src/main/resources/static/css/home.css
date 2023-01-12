@@ -10,6 +10,28 @@
   max-height: 10000px;
 }
 
-.container .row {
-    margin-left: 0
+.ml-0{
+   margin-left: 0;
+}
+
+.pl-0{
+   padding-left: 0;
+}
+
+.mr-0{
+    margin-right: 0;
+}
+
+.pr-0{
+    padding-right: 0;
+}
+
+.container.ml-0 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
 }
