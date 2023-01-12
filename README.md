@@ -6,11 +6,11 @@
 
 ## Technologies Used
 
-1. <b>Java</b>.
-2. <b>Spring Boot</b>.
-3. <b>Javascript</b>.
-4. <b>HTML</b>.
-5. <b>Bootstrap 5</b>.
+1. <b>Java</b>
+2. <b>Spring Boot</b>
+3. <b>Javascript</b>
+4. <b>HTML</b>
+5. <b>Bootstrap 5</b>
 
 ## User (Doctor) Scenarios
 The application provides the following user (doctor) scenarios:
