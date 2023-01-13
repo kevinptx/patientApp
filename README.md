@@ -2,7 +2,7 @@
 
 ## A GIF example of the app:
 
-![patientApp](https://github.com/kevinptx/patientApp/blob/main/hotel_reservation.gif)
+![patientApp](https://github.com/kevinptx/patientApp/blob/main/patientAppDemo.gif)
 
 ## Technologies Used
 
