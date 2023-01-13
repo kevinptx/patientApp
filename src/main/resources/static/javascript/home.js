@@ -122,12 +122,12 @@ const createPatientCards = (array) => {
         patientCard.innerHTML = `
             <div class="card d-flex" style="width: 18rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    <p class="card-text">First name: ${obj.firstName}</p>
-                    <p class="card-text">Last name: ${obj.lastName}</p>
-                    <p class="card-text">Age: ${obj.age}</p>
-                    <p class="card-text">Diagnosis: ${obj.diagnosis}</p>
-                    <p class="card-text">Prescriptions: ${obj.prescriptions}</p>
-                    <p class="card-text">Notes: ${obj.doctorNotes}</p>
+                    <p class="card-text"><span class="bolded">First name:</span> ${obj.firstName}</p>
+                    <p class="card-text"><span class="bolded">Last name:</span> ${obj.lastName}</p>
+                    <p class="card-text"><span class="bolded">Age:</span> ${obj.age}</p>
+                    <p class="card-text"><span class="bolded">Diagnosis:</span> ${obj.diagnosis}</p>
+                    <p class="card-text"><span class="bolded">Prescriptions:</span> ${obj.prescriptions}</p>
+                    <p class="card-text"><span class="bolded">Notes:</span> ${obj.doctorNotes}</p>
                     <div class="d-flex justify-content-between">
                         <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Delete</button>
                         <button onclick="getPatientById(${obj.id})" type="button" class="btn btn-primary"

@@ -15,6 +15,10 @@ body {
     font-weight: bold;
 }
 
+.bolded {
+    font-weight: bold;
+}
+
 .expandable {
   overflow: hidden;
   max-height: 50px;
