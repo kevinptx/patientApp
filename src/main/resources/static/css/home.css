@@ -1,4 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+   background-color: #f0f8ff;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+}
+
+.form-control-plaintext {
+    font-weight: bold;
+}
 
 .expandable {
   overflow: hidden;
@@ -35,3 +50,33 @@
     display: flex;
     justify-content: space-between;
 }
+
+.accordion-button {
+    font-size: inherit;
+}
+
+.accordion-item {
+    border: 1px solid rgba(35, 65, 100, .15)
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background: rgb(35,65,100);
+    color: #e8e8e8;
+}
+
+.accordion-button:not(.collapsed)::after  {
+    filter: brightness(00%) invert(70%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+@media (max-width: 767px) {
+    .accordion-body h3 {
+        font-size: calc(.95rem + 1.5vw);
+    }
+}
+
+
