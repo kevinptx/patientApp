@@ -41,9 +41,19 @@ body {
     padding-right: 0;
 }
 
+
 .container.ml-0 {
     display: flex;
     justify-content: space-between;
+}
+
+
+.container{
+    margin-top: 5vh;
+}
+
+#patient-container{
+    margin-bottom: 10vh;
 }
 
 .row {
