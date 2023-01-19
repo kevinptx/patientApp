@@ -142,6 +142,17 @@ const createPatientCards = (array) => {
     })
 }
 
+//Next Steps:
+//Maybe squeeze doing 1 more feature.
+//practice code probs/Algorithms/DS
+//get started on presentation - how to structure presentation (features I will present from backend and frontend)
+//show register and login page, mention how I hash the password, mention briefly the specific class I used to hash password. (walk audience around my app)
+//can be general when it comes to discussion of technical aspects. Mention specific technologies and/or frameworks.
+//I may need to talk for about 5 min. Do some research on how to best present a fullstack app.
+//Hit the best talking points.
+//**try to add spacing in between the fields, both when I first create a record and when I edit one of them. (frontend) ** simple: add spacing between text areas.
+//this will make it look much better.
+
 function handleLogout(){
     let c = document.cookie.split(";");
     for(let i in c){
