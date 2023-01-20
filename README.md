@@ -2,7 +2,7 @@
 
 ## A GIF example of the app. It is only a simplified prototype that is still under development:
 
-![patientApp](https://github.com/kevinptx/patientApp/blob/main/patientAppDemo.gif)
+![patientApp](https://github.com/kevinptx/patientApp/blob/main/patientApp-Demo.gif)
 
 ## Technologies Used
 
