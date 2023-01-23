@@ -37,11 +37,7 @@ public class Patient {
 
     @Column(columnDefinition = "text")
     private String doctorNotes;
-//add annotations like NotNull, NotEmpty, etc...
-
-//    make new fields for first name, last name, age, diagnosis, prescriptions, doctor notes. for diagnosis,
-//    prescription, doctor notes, I need: @Column(columnDefinition = "text") On the endpoint, you pass a JSON
-//    object, and you save each of these fields inside of that object.
+//add Validation Annotations like NotNull, NotEmpty, etc...
 
     @ManyToOne
     @JsonBackReference

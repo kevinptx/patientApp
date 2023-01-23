@@ -120,7 +120,7 @@ const createPatientCards = (array) => {
         let patientCard = document.createElement("div")
         patientCard.classList.add("m-2")
         patientCard.innerHTML = `
-            <div class="card d-flex" style="width: 18rem; height: 18rem;">
+            <div class="card d-flex" style="width: 25rem; height: 18rem;">
                 <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
                     <p class="card-text"><span class="bolded">First name:</span> ${obj.firstName}</p>
                     <p class="card-text"><span class="bolded">Last name:</span> ${obj.lastName}</p>

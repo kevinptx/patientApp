@@ -11,6 +11,10 @@ body {
    width: 100%;
 }
 
+#patient-container{
+ width:100%
+}
+
 .form-control-plaintext {
     font-weight: bold;
 }
