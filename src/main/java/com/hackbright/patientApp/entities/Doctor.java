@@ -27,7 +27,7 @@ public class Doctor {
     @NotBlank(message = "Name is required")
     private String doctorname;
 
-    //may store userID in cookies, so subsequent calls are aware of this (This is what NoteApp does)
+    //userID stored in cookies, so subsequent calls are aware of this
 
     @Column
     @NotBlank(message = "Password is required")

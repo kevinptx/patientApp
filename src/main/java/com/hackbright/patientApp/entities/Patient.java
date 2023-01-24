@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 //import javax.persistence.*;
 import javax.print.Doc;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Patients")
@@ -21,12 +23,15 @@ public class Patient {
     private Long id;
 
     @Column
+    @NotBlank(message = "First name is required")
     private String firstName;
 
     @Column
+    @NotBlank(message = "Last name is required")
     private String lastName;
 
     @Column
+    @NotNull
     private Integer age;
 
     @Column(columnDefinition = "text")
@@ -37,7 +42,6 @@ public class Patient {
 
     @Column(columnDefinition = "text")
     private String doctorNotes;
-//add Validation Annotations like NotNull, NotEmpty, etc...
 
     @ManyToOne
     @JsonBackReference
