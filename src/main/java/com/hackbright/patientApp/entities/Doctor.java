@@ -24,14 +24,14 @@ public class Doctor {
     private Long id;
 
     @Column(unique = true)
-    @NotBlank
+    @NotBlank(message = "Name is required")
     private String doctorname;
 
     //may store userID in cookies, so subsequent calls are aware of this (This is what NoteApp does)
 
     @Column
-    @NotBlank
-    @Size(min=4)
+    @NotBlank(message = "Password is required")
+    @Size(min = 8, message = "Password must be at least 8 characters long")
     private String password;
 
     @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})

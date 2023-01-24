@@ -37,4 +37,5 @@ application.properties
 patientApp/src/main/resources/application.properties
 HackBright/patientApp/src/main/resources/application.properties
 src/main/resources/application.properties
+src/main/resources/*.properties
 *.properties
