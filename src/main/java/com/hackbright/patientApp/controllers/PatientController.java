@@ -1,6 +1,5 @@
 package com.hackbright.patientApp.controllers;
 
-import com.hackbright.patientApp.dtos.DoctorDto;
 import com.hackbright.patientApp.dtos.PatientDto;
 import com.hackbright.patientApp.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,17 +1,14 @@
 package com.hackbright.patientApp.services;
 
 import com.hackbright.patientApp.dtos.PatientDto;
-import com.hackbright.patientApp.dtos.DoctorDto;
 import com.hackbright.patientApp.entities.Patient;
 import com.hackbright.patientApp.entities.Doctor;
 import com.hackbright.patientApp.repositories.PatientRepository;
 import com.hackbright.patientApp.repositories.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-//import javax.transaction.Transactional;
 import java.util.*;
 import java.util.stream.Collectors;
 

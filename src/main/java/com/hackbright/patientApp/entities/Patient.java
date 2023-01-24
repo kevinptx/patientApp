@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//import javax.persistence.*;
-import javax.print.Doc;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
