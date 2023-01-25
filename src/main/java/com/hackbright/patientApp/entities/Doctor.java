@@ -24,7 +24,7 @@ public class Doctor {
 
     @Column(unique = true)
     @NotBlank(message = "Name is required")
-    private String doctorname;
+    private String doctorName;
 
     //userID stored in cookies, so subsequent calls are aware of this
 
@@ -40,8 +40,8 @@ public class Doctor {
     //we want oneToMany mapping between doctors and patients. Only the doctors will login at this point. Login as Dr
     //to access list of pts.
     public Doctor(DoctorDto doctorDto){
-        if (doctorDto.getDoctorname() != null){
-            this.doctorname = doctorDto.getDoctorname();
+        if (doctorDto.getDoctorName() != null){
+            this.doctorName = doctorDto.getDoctorName();
         }
         if (doctorDto.getPassword() != null){
             this.password = doctorDto.getPassword();

@@ -1,5 +1,5 @@
 let loginForm = document.getElementById('login-form')
-let loginDoctorname = document.getElementById('login-doctorname')
+let loginDoctorName = document.getElementById('login-doctorname')
 let loginPassword = document.getElementById('login-password')
 
 const headers = {

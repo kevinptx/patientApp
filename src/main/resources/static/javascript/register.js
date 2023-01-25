@@ -12,7 +12,7 @@ const handleSubmit = async (e) =>{
     e.preventDefault()
 
     let bodyObj = {
-        doctorname: registerDoctorName.value,
+        doctorName: registerDoctorName.value,
         password: registerPassword.value
     }
 

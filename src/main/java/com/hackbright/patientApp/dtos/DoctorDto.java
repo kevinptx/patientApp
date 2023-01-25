@@ -14,7 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class DoctorDto implements Serializable {
     private Long id;
-    private String doctorname;
+    private String doctorName;
     private String password;
     private Set<DoctorDto> doctorDtoSet = new HashSet<>();
 
@@ -22,8 +22,8 @@ public class DoctorDto implements Serializable {
         if (doctor.getId() != null){
             this.id = doctor.getId();
         }
-        if (doctor.getDoctorname() != null){
-            this.doctorname = doctor.getDoctorname();
+        if (doctor.getDoctorName() != null){
+            this.doctorName = doctor.getDoctorName();
         }
         if (doctor.getPassword() != null){
             this.password = doctor.getPassword();
