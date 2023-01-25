@@ -68,7 +68,7 @@ public class PatientDto implements Serializable {
             this.age = patient.getAge();
         }
         this.doctorDto = new DoctorDto();
-        this.doctorDto.setDoctorname(patient.getDoctor().getDoctorname());
+        this.doctorDto.setDoctorName(patient.getDoctor().getDoctorName());
         this.doctorDto.setId(patient.getDoctor().getId());
     }
 }
