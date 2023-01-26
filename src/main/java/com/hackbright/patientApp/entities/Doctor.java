@@ -22,6 +22,7 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //Validation annotations: https://education.launchcode.org/java-web-development/chapters/spring-model-validation/validation-annotations.html
     @Column(unique = true)
     @NotBlank(message = "Name is required")
     private String doctorName;
