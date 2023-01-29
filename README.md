@@ -1,4 +1,4 @@
-# patientApp is a Java Spring Boot project for doctors, nurses, and medical providers to keep track of patient data. It is the personal capstone project for HackBright Academy's Java Spring Boot program. 
+# patientApp is a Java Spring Boot project for doctors, nurses, and medical providers to keep track of patient data. It is the personal capstone project for Devmountain's Java Spring Boot program. 
 
 ## A GIF example of the app. It is only a simplified prototype that is still under development:
 ### Note: GIF quality has been purposely reduced using Gifski in order to decrease file size for the purpose of uploading on GitHub.
