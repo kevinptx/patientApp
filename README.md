@@ -56,7 +56,7 @@ The application provides the following user (doctor/provider) scenarios:
 3. <b>Command Line Interface<b>
 
 ## Bonus
-  <b>My application is using a GET request to display data from OpenFDA using the [Drug API Endpoints]([https://www.google.com](https://open.fda.gov/apis/drug/) "OpenFDA's Drug API Endpoints")
+  <b>My application is using a GET request to display data from OpenFDA using the [Drug API Endpoints]([https://www.google.com](https://open.fda.gov/apis/drug/) "OpenFDA's Drug API Endpoints")<b>
 
 
   
