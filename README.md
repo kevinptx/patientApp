@@ -9,9 +9,13 @@
 
 1. <b>Java</b>
 2. <b>Spring Boot</b>
-3. <b>Javascript</b>
-4. <b>HTML</b>
-5. <b>Bootstrap 5</b>
+3.  <b>Maven</b>
+4. <b>Spring Data JPA<b>
+5. <b>Hibernate<b>
+6. <b>Javascript</b>
+7. <b>HTML</b>
+8. <b>Bootstrap 5</b>
+9. <b>PostgreSQL</b>
 
 ## User (Doctor) Scenarios
 The application provides the following user (doctor) scenarios:
@@ -26,3 +30,29 @@ The application provides the following user (doctor) scenarios:
 
 5. <b>Deleting</b>: Doctors (users) can delete patient information.
 
+## Data Model and Entity Mapping
+
+1. <b>One doctor to many patients (@OneToMany on the Doctor @Entity model)<b>
+2. <b>Many patients to one doctor (@OneToMany on the Patient @Entity model)<b>
+  
+##Below are all of the project's requirements, which my application exceeded:
+  
+#Database
+1. <b>Has at least 3 tables<b>
+2. <b>Contains at least 1 one:many relationship between tables<b>
+3. <b>Tables contain data<b>
+4. <b>Connects to server<b>
+5. <b>Server<b>
+6. <b>Uses an ORM (such as Hibernate)<b>
+7. <b>Uses DAO design<b>
+8. <b>Handles requests<b>
+9. <b>Sends responses<b>
+10. <b>Accepts requests from a front-end<b>
+
+#Front-end
+1. <b>Web applications with at least 3 views<b>
+2. <b>Discord bot<b>
+3. <b>Command Line Interface<b>
+
+  
+  
