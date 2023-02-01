@@ -18,8 +18,9 @@
 5. <b>Hibernate</b>
 6. <b>Javascript</b>
 7. <b>HTML</b>
-8. <b>Bootstrap 5</b>
-9. <b>PostgreSQL</b>
+8. <b>CSS</b>
+9. <b>Bootstrap 5</b>
+10. <b>PostgreSQL</b>
 
 ## CRUD Operations applying RESTful Principles
 1. <b>POST:<b> Creates a new resource (A patient form can be filled out and saved to the database on form submit)
