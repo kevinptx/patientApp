@@ -38,7 +38,7 @@ The application provides the following user (doctor/provider) scenarios:
 ## Below are the project's requirements, which my application exceeded (7 of the following had to be met in order to pass the project):
   
   
-#Database
+# Database
 1. <b>Has at least 3 tables<b>
 2. <b>Contains at least 1 one:many relationship between tables<b>
 3. <b>Tables contain data<b>
@@ -50,7 +50,7 @@ The application provides the following user (doctor/provider) scenarios:
 9. <b>Sends responses<b>
 10. <b>Accepts requests from a front-end<b>
 
-#Front-end
+# Front-end
 1. <b>Web applications with at least 3 views<b>
 2. <b>Discord bot<b>
 3. <b>Command Line Interface<b>
