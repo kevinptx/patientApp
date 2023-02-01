@@ -37,9 +37,7 @@ public class Doctor {
     @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JsonManagedReference
     private Set<Patient> patientSet = new HashSet<>();
-    //Do it just like the Notes app: Users will be doctors table and notes table should be patients table.
-    //we want oneToMany mapping between doctors and patients. Only the doctors will login at this point. Login as Dr
-    //to access list of pts.
+
     public Doctor(DoctorDto doctorDto){
         if (doctorDto.getDoctorName() != null){
             this.doctorName = doctorDto.getDoctorName();

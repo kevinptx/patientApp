@@ -43,7 +43,6 @@ public class Patient {
 
     @ManyToOne
     @JsonBackReference
-//    @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
     public Patient(PatientDto patientDto){
