@@ -33,7 +33,7 @@ The application provides the following user (doctor/provider) scenarios:
 ## Data Model and Entity Mapping
 
 1. <b>One doctor to many patients (@OneToMany on the Doctor @Entity model)<b>
-2. <b>Many patients to one doctor (@OneToMany on the Patient @Entity model)<b>
+2. <b>Many patients to one doctor (@ManyToOne on the Patient @Entity model)<b>
   
 ## Below are the project's requirements, which my application exceeded (7 of the following had to be met in order to pass the project):
   
