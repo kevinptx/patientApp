@@ -7,7 +7,7 @@
 
 ![patientApp](https://github.com/kevinptx/patientApp/blob/main/patientAppDemo.gif)
 
-[Gifski](https://gif.ski/ "Gifski")</b> is used to decrease the size of the gif upload, resulting in the blurry appearance)
+<b>[Gifski](https://gif.ski/ "Gifski")</b> is used to decrease the size of the gif upload, resulting in the blurry appearance.
 
 ## Technologies Used
 
