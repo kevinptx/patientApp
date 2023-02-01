@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.header-container{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.header-image{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
 body {
    background-color: #f0f8ff;
    padding: 0;
@@ -11,9 +26,16 @@ body {
    width: 100%;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    }
+
+
 #patient-container{
  width:100%
 }
+
 
 .form-control-plaintext {
     font-weight: bold;
@@ -110,6 +132,7 @@ body {
 
 .h2, h2 {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #patient-form{
