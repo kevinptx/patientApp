@@ -56,7 +56,7 @@ The application provides the following user (doctor/provider) scenarios:
 4. <b>Connects to server</b>
 5. <b>Server</b>
 6. <b>Uses an ORM (such as Hibernate)</b>
-7. <b>Uses DAO design</b>
+7. <b>Uses DAO (Data Access Object) design</b>
 8. <b>Handles requests</b>
 9. <b>Sends responses</b>
 10. <b>Accepts requests from a front-end</b>
