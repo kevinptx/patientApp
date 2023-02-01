@@ -1,4 +1,4 @@
-# patientApp is a Java Spring Boot project for doctors, nurses, and medical providers to keep track of patient data. It is the personal capstone project for Devmountain's Java Spring Boot program. 
+# patientApp is a Java Spring Boot project for doctors, nurses, and medical providers to keep track of patient data. It is the personal capstone project for Devmountain's Java Spring Boot program. It employs all CRUD operations (Create, Read/Retrieve, Update, and Delete), which are the four basic functions of the persistence storage. 
 
 ## A GIF of the app. It is still under development:
 ### Note: GIF quality has been purposely reduced using Gifski in order to decrease file size for the purpose of uploading on GitHub.
@@ -16,6 +16,12 @@
 7. <b>HTML</b>
 8. <b>Bootstrap 5</b>
 9. <b>PostgreSQL</b>
+
+## CRUD Operations
+POST: Creates a new resource (A patient form can be filled out and saved to the database on form submit)
+GET: Reads a resource (Patient data can be displayed from the database)
+PUT: Updates an existing resource (Patient data can be edited and saved to the database)
+DELETE: Deletes a resource (Patient data can be deleted)
 
 ## User (Doctor/Provider) Scenarios
 The application provides the following user (doctor/provider) scenarios:
