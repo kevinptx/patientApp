@@ -17,7 +17,7 @@
 8. <b>Bootstrap 5</b>
 9. <b>PostgreSQL</b>
 
-## CRUD Operations
+## CRUD Operations applying RESTful Principles
 1. <b>POST:<b> Creates a new resource (A patient form can be filled out and saved to the database on form submit)
 2. <b>GET:<b> Reads a resource (Patient data can be displayed from the database)
 3. <b>PUT:<b> Updates an existing resource (Patient data can be edited and saved to the database)
