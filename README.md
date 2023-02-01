@@ -9,7 +9,7 @@
 
 1. <b>Java</b>
 2. <b>Spring Boot</b>
-3.  <b>Maven</b>
+3. <b>Maven</b>
 4. <b>Spring Data JPA<b>
 5. <b>Hibernate<b>
 6. <b>Javascript</b>
@@ -17,18 +17,18 @@
 8. <b>Bootstrap 5</b>
 9. <b>PostgreSQL</b>
 
-## User (Doctor) Scenarios
-The application provides the following user (doctor) scenarios:
+## User (Doctor/Provider) Scenarios
+The application provides the following user (doctor/provider) scenarios:
 
-1. <b>Creating a doctor account</b>: The doctor (user) needs to create an account before patient information is saved in the back end.
+1. <b>Creating a doctor/provider account</b>: The doctor/provider (user) needs to create an account before patient information is saved in the back end.
 
-2. <b>Logging in</b>: Doctors (users) can log in to their account.
+2. <b>Logging in</b>: Doctors/Providers (users) can log in to their account.
 
-3. <b>Filling out and submitting a form</b>: Doctors (users) can fill form field information and submit it. That data is then saved in the database.
+3. <b>Filling out and submitting a form</b>: Doctors/Providers (users) can fill form field information and submit it. That data is then saved in the database.
 
-4. <b>Editing</b>: Doctors (users) can edit patient information.
+4. <b>Editing</b>: Doctors/Providers (users) can edit patient information.
 
-5. <b>Deleting</b>: Doctors (users) can delete patient information.
+5. <b>Deleting</b>: Doctors/Providers (users) can delete patient information.
 
 ## Data Model and Entity Mapping
 
