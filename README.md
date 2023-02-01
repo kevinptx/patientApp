@@ -57,7 +57,7 @@ The application provides the following user (doctor/provider) scenarios:
 10. <b>Accepts requests from a front-end</b>
 
 ## Front-end
-1. <b>Web applications with at least 3 views</b>
+1. <b>Web application with at least 3 views</b>
 2. <b>Discord bot</b>
 3. <b>Command Line Interface</b>
 
