@@ -56,7 +56,7 @@ The application provides the following user (doctor/provider) scenarios:
 3. <b>Command Line Interface<b>
 
 ## Bonus
-1.  <b>My application is using a GET request to display data from OpenFDA using the [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints")<b>
+1.  <b>My application is using a GET request to display data from OpenFDA using its [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints")<b>
 2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API
 3. <b>The selected drug is saved to the database table on Submission of the patient form
 4. <b>The provider can view associated drug information (e.g., adverse reactions, black box warnings, and dosage and administration) pulled from the OpenFDA Drug API
