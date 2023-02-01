@@ -35,7 +35,7 @@ The application provides the following user (doctor) scenarios:
 1. <b>One doctor to many patients (@OneToMany on the Doctor @Entity model)<b>
 2. <b>Many patients to one doctor (@OneToMany on the Patient @Entity model)<b>
   
-##Below are all of the project's requirements, which my application exceeded:
+## Below are the project's requirements, which my application exceeded:
   
 #Database
 1. <b>Has at least 3 tables<b>
