@@ -18,10 +18,10 @@
 9. <b>PostgreSQL</b>
 
 ## CRUD Operations
-POST: Creates a new resource (A patient form can be filled out and saved to the database on form submit)
-GET: Reads a resource (Patient data can be displayed from the database)
-PUT: Updates an existing resource (Patient data can be edited and saved to the database)
-DELETE: Deletes a resource (Patient data can be deleted)
+<b>POST: Creates a new resource (A patient form can be filled out and saved to the database on form submit)<b>
+<b>GET: Reads a resource (Patient data can be displayed from the database)<b>
+<b>PUT: Updates an existing resource (Patient data can be edited and saved to the database)<b>
+<b>DELETE: Deletes a resource (Patient data can be deleted)<b>
 
 ## User (Doctor/Provider) Scenarios
 The application provides the following user (doctor/provider) scenarios:
