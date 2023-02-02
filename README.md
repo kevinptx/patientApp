@@ -67,7 +67,7 @@ The application provides the following user (doctor/provider) scenarios:
 
 ## Bonus/Additional Features
 1.  <b>My application is using a GET request to display data from OpenFDA through its [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints").</b>
-  2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. I populated the drug dropdown with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.</b>
+  2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. The drug dropdown is populated with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.</b>
   3. <b>The selected drug is saved to the database table on submission of the patient form</b>
 4. <b>The provider can view associated drug information (e.g., adverse reactions, boxed warnings, and dosage and administration) pulled from the [OpenFDA Drug API](https://open.fda.gov/apis/drug/ "OpenFDA Drug API").</b>
     
