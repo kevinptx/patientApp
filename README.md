@@ -6,7 +6,7 @@
 
 ![patientApp](https://github.com/kevinptx/patientApp/blob/main/patientAppDemo.gif)
 
-### <b>[Gifski](https://gif.ski/ "Gifski")</b> is used to decrease the size of the gif for uploading to GitHub, resulting in the blurry appearance and color incongruency.
+### <b>[Gifski](https://gif.ski/ "Gifski")</b> is used to decrease the size of the above gif for uploading to GitHub, resulting in the blurry appearance and color incongruency.
 
 ## Technologies Used
 
