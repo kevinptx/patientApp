@@ -38,10 +38,10 @@ public class DoctorServiceImpl implements DoctorService {
                 response.add("http://localhost:8080/templates/home.html");
                 response.add(String.valueOf(doctorOptional.get().getId()));
             } else {
-                response.add("Doctor name or password incorrect");
+                response.add("Provider name or password incorrect");
             }
         } else {
-            response.add("Doctor name or password incorrect");
+            response.add("Provider name or password incorrect");
         }
         return response;
 
