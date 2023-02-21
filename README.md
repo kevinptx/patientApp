@@ -64,27 +64,27 @@ The application provides the following user (doctor/provider) scenarios:
   
   
 ## Database and Back-end
-1. <b>Has at least 3 tables</b>
-2. <b>Contains at least 1 one:many relationship between tables</b>
-3. <b>Tables contain data</b>
-4. <b>Connects to server</b>
-5. <b>Server</b>
-6. <b>Uses an ORM (such as Hibernate)</b>
-7. <b>Uses DAO (Data Access Object) design</b>
-8. <b>Handles requests</b>
-9. <b>Sends responses</b>
-10. <b>Accepts requests from a front-end</b>
+1. Has at least 3 tables
+2. Contains at least 1 one:many relationship between tables
+3. Tables contain data
+4. Connects to server
+5. Server
+6. Uses an ORM (such as Hibernate)
+7. Uses DAO (Data Access Object) design
+8. Handles requests
+9. Sends responses
+10. Accepts requests from a front-end
 
 ## Front-end
-1. <b>Web application with at least 3 views</b>
-2. <b>Discord bot</b>
-3. <b>Command Line Interface</b>
+1. Web application with at least 3 views
+2. Discord bot
+3. Command Line Interface
 
 ## Bonus and Additional Features
-1.  <b>My application is using a GET request to display data from OpenFDA through its [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints").</b>
-  2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. The drug dropdown is populated with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.</b>
-  3. <b>The selected drug is saved to the database table on submission of the patient form</b>
-4. <b>The provider can view associated drug information (e.g., adverse reactions, boxed warnings, and dosage and administration) pulled from the [OpenFDA Drug API](https://open.fda.gov/apis/drug/ "OpenFDA Drug API").</b>
+1.  My application is using a GET request to display data from OpenFDA through its [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints").
+  2. I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. The drug dropdown is populated with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.
+  3. The selected drug is saved to the database table on submission of the patient form.
+4. The provider can view associated drug information (e.g., adverse reactions, boxed warnings, and dosage and administration) pulled from the [OpenFDA Drug API](https://open.fda.gov/apis/drug/ "OpenFDA Drug API").
 
 ## Installation
 
