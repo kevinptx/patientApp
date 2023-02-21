@@ -37,8 +37,8 @@ It is the personal capstone project for Devmountain's (Hackbright Academy's) Int
 10. <b>PostgreSQL</b>
 
 ## CRUD Operations applying RESTful Principles
-1. <b>POST:<b> Creates a new resource (A patient form can be filled out and saved to the database on form submit)
-2. <b>GET:<b> Reads a resource (Patient data can be displayed from the database)
+1. POST: Creates a new resource (A patient form can be filled out and saved to the database on form submit)
+2. GET: Reads a resource (Patient data can be displayed from the database)
 3. <b>PUT:<b> Updates an existing resource (Patient data can be edited and saved to the database)
 4. <b>DELETE:<b> Deletes a resource (Patient data can be deleted)
 
