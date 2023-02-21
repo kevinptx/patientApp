@@ -8,6 +8,16 @@
 
 ### <b>[Gifski](https://gif.ski/ "Gifski")</b> is used to decrease the size of the above gif for uploading to GitHub, resulting in the blurry appearance and color incongruency.
 
+**CONTENTS**
+
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Future Features](#future-features)
+- [Installation](#installation)
+- [About the Developers](#about-the-developers)
+
+## Features
+
 ## Technologies Used
 
 1. <b>Java</b>
