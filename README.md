@@ -12,11 +12,11 @@
 
 - [Technologies Used](#technologies-used)
 - [Crud Operations](#CRUD-operations-applying-rESTful-principles)
-- [User (Doctor/Provider) Scenarios](#User-(Doctor/Provider)-Scenarios)
+- [User-Scenarios](#User-Scenarios)
 - [Data Model and Entity Mapping](#data-model-and-entity-mapping)
-- [Database/Back-end](#Database/Back-end)
+- [Database and Back-end](#Database-and-Back-end)
 - [Front-end](#Front-end)
-- [Bonus/Additional Features](#Bonus/Additional-Features)
+- [Bonus and Additional Features](#Bonus-and-Additional-Features)
 - [Installation](#installation)
 - [About Kevin Peery](#about-kevin-peery)
 
@@ -40,7 +40,7 @@
 3. <b>PUT:<b> Updates an existing resource (Patient data can be edited and saved to the database)
 4. <b>DELETE:<b> Deletes a resource (Patient data can be deleted)
 
-## User (Doctor/Provider) Scenarios
+## User Scenarios
 The application provides the following user (doctor/provider) scenarios:
 
 1. <b>Creating a doctor/provider account</b>: The doctor/provider (user) needs to create an account before patient information is saved in the back end.
@@ -61,7 +61,7 @@ The application provides the following user (doctor/provider) scenarios:
 ## Below are the project's requirements, which my application exceeded (7 of the following had to be met in order to pass the project):
   
   
-## Database/Back-end
+## Database and Back-end
 1. <b>Has at least 3 tables</b>
 2. <b>Contains at least 1 one:many relationship between tables</b>
 3. <b>Tables contain data</b>
@@ -78,7 +78,7 @@ The application provides the following user (doctor/provider) scenarios:
 2. <b>Discord bot</b>
 3. <b>Command Line Interface</b>
 
-## Bonus/Additional Features
+## Bonus and Additional Features
 1.  <b>My application is using a GET request to display data from OpenFDA through its [Drug API Endpoints](https://open.fda.gov/apis/drug/ "OpenFDA Drug API Endpoints").</b>
   2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. The drug dropdown is populated with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.</b>
   3. <b>The selected drug is saved to the database table on submission of the patient form</b>
