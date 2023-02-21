@@ -11,12 +11,15 @@
 **CONTENTS**
 
 - [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Future Features](#future-features)
+- [Crud Operations](#CRUD-operations-applying-rESTful-principles)
+- [User (Doctor/Provider) Scenarios](#User-(Doctor/Provider)-Scenarios)
+- [Data Model and Entity Mapping](#data-model-and-entity-mapping)
+- [Database/Back-end](#Database/Back-end)
+- [Front-end](#Front-end)
+- [Bonus/Additional Features](#Bonus/Additional-Features)
 - [Installation](#installation)
-- [About the Developers](#about-the-developers)
+- [About Kevin Peery](#about-kevin-peery)
 
-## Features
 
 ## Technologies Used
 
@@ -111,6 +114,18 @@ Run the file in IntelliJ (or your IDE of choice)
 
 Navigate to `localhost:8080/home.html`
 
+## About Kevin Peery
+
+Kevin Peery is a software engineer and registered nurse in Houston, TX. He holds a bachelor's degree with double majors in business economics and history from the University of Texas at Austin, a Bachelor of Science in Nursing from the University of Texas at Arlington, and an Associate of Science in Computer Science. He has also completed several software engineering immersive programs. Kevin has had previous experience with the Database as a Service (DBAAS) team at a major oil and gas company where he focused on Angular development. He has completed training programs and has coding experience in langauges such as Java, Spring Boot, JavaScript, Angular, React, Ruby, Ruby on Rails, and C#. In addition to software development and active learning, Kevin enjoys running outdoors and staying healthy.
+
+Connect with Kevin: 
+<p><a href="https://www.linkedin.com/in/kevin-peery/">
+  <img
+    alt="LinkedIn"
+    src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+  />
+</a>
+</p>
 
 
   
