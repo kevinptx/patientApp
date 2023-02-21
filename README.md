@@ -70,8 +70,36 @@ The application provides the following user (doctor/provider) scenarios:
   2. <b>I use a dropdown menu that allows the provider to select a drug from the OpenFDA Drug API. The drug dropdown is populated with a list of the most common medications seen on the NCLEX-RN exam, which is required for registered nurse licensure in the USA, Canada, and Australia.</b>
   3. <b>The selected drug is saved to the database table on submission of the patient form</b>
 4. <b>The provider can view associated drug information (e.g., adverse reactions, boxed warnings, and dosage and administration) pulled from the [OpenFDA Drug API](https://open.fda.gov/apis/drug/ "OpenFDA Drug API").</b>
-    
-   
+
+## Installation
+
+#### Requirements:
+
+- Java 7.0
+- Spring Boot
+
+To have this app running on your local computer, please follow the below steps:
+
+Clone repository:
+
+```
+$ git clone https://github.comkevinptx/patientApp.git
+```
+
+Create new backend server:
+
+Create a free database server with AWS
+
+
+Update application properties file:
+
+Get URI from AWS
+
+
+Run the file in IntelliJ (or your IDE of choice)
+
+
+Navigate to `localhost:8080/home.html`
 
 
 
