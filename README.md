@@ -98,7 +98,7 @@ To have this app running on your local computer, please follow the below steps:
 Clone repository:
 
 ```
-$ git clone https://github.comkevinptx/patientApp.git
+$ git clone https://github.com/kevinptx/patientApp.git
 ```
 
 Create new backend server:
