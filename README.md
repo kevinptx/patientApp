@@ -103,7 +103,7 @@ $ git clone https://github.com/kevinptx/patientApp.git
 
 Create new backend server:
 
-Create a free database server with AWS or use [pgAdmin 4](https://www.pgadmin.org/download/ "pgAdmin 4") on your local machine to create and maintain a local postgreSQL database session
+Create a free database server with AWS or use [pgAdmin 4](https://www.pgadmin.org/download/ "pgAdmin 4") on your computer to create and maintain a local postgreSQL database session
 
 
 Update application properties file:
