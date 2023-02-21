@@ -25,40 +25,40 @@ It is the personal capstone project for Devmountain's (Hackbright Academy's) Int
 
 ## Technologies Used
 
-1. <b>Java</b>
-2. <b>Spring Boot</b>
-3. <b>Maven</b>
-4. <b>Spring Data JPA</b>
-5. <b>Hibernate</b>
-6. <b>Javascript</b>
-7. <b>HTML</b>
-8. <b>CSS</b>
-9. <b>Bootstrap 5</b>
-10. <b>PostgreSQL</b>
+1. Java
+2. Spring Boot
+3. Maven
+4. Spring Data JPA
+5. Hibernate
+6. Javascript
+7. HTML
+8. CSS
+9. Bootstrap 5
+10. PostgreSQL
 
 ## CRUD Operations applying RESTful Principles
 1. POST: Creates a new resource (A patient form can be filled out and saved to the database on form submit)
 2. GET: Reads a resource (Patient data can be displayed from the database)
-3. <b>PUT:<b> Updates an existing resource (Patient data can be edited and saved to the database)
-4. <b>DELETE:<b> Deletes a resource (Patient data can be deleted)
+3. PUT: Updates an existing resource (Patient data can be edited and saved to the database)
+4. DELETE: Deletes a resource (Patient data can be deleted)
 
 ## User Scenarios
 The application provides the following user (doctor/provider) scenarios:
 
-1. <b>Creating a doctor/provider account</b>: The doctor/provider (user) needs to create an account before patient information is saved in the back end.
+1. Creating a doctor/provider account: The doctor/provider (user) needs to create an account before patient information is saved in the back end.
 
-2. <b>Logging in</b>: Doctors/Providers (users) can log in to their account.
+2. Logging in: Doctors/Providers (users) can log in to their account.
 
-3. <b>Filling out and submitting a form</b>: Doctors/Providers (users) can fill form field information and submit it. That data is then saved in the database.
+3. Filling out and submitting a form: Doctors/Providers (users) can fill form field information and submit it. That data is then saved in the database.
 
-4. <b>Editing</b>: Doctors/Providers (users) can edit patient information.
+4. Editing: Doctors/Providers (users) can edit patient information.
 
-5. <b>Deleting</b>: Doctors/Providers (users) can delete patient information.
+5. Deleting: Doctors/Providers (users) can delete patient information.
 
 ## Data Model and Entity Mapping
 
-1. <b>One doctor to many patients (@OneToMany on the Doctor @Entity model)<b>
-2. <b>Many patients to one doctor (@ManyToOne on the Patient @Entity model)<b>
+1. One doctor to many patients (@OneToMany on the Doctor @Entity model)
+2. Many patients to one doctor (@ManyToOne on the Patient @Entity model)
   
 ## Below are the project's requirements, which my application exceeded (7 of the following had to be met in order to pass the project):
   
