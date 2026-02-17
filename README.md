@@ -2,7 +2,7 @@
 
 I created a Java Spring Boot project for doctors, nurses, and medical providers to keep track of patient data.
 
-It is the personal capstone project for Hackbright Academy's (Devmountain's) Intermediate Level Java Spring Boot program. All CRUD operations (Create, Read/Retrieve, Update, and Delete) are demonstrated, which are the four basic functions of persistence storage. The app, and the program for which it was created, are focused on back end rather than front end or user interface (UI) software development. Therefore, front end styling is not the objective or focus of this particular application.
+It is the personal capstone project for Hackbright Academy's (Devmountain's) Intermediate Level Java Spring Boot program. All CRUD operations (Create, Read/Retrieve, Update, and Delete) are demonstrated, which are the four basic functions of persistent storage. The app and the program for which it was created are focused on back-end rather than front-end or user interface (UI) software development. Therefore, front-end styling is not the objective or focus of this application.
 
 ## Below is GIF of the app. It is still under development:
 
@@ -30,7 +30,7 @@ It is the personal capstone project for Hackbright Academy's (Devmountain's) Int
 3. Maven
 4. Spring Data JPA
 5. Hibernate
-6. Javascript
+6. JavaScript
 7. HTML
 8. CSS
 9. Bootstrap 5
@@ -47,9 +47,9 @@ The application provides the following user (doctor/provider) scenarios:
 
 1. Creating a doctor/provider account: The doctor/provider (user) needs to create an account before patient information is saved in the back end.
 
-2. Logging in: Doctors/Providers (users) can log in to their account.
+2. Logging in: Doctors/Providers (users) can log in to their accounts.
 
-3. Filling out and submitting a form: Doctors/Providers (users) can fill form field information and submit it. That data is then saved in the database.
+3. Filling out and submitting a form: Doctors/Providers (users) can fill in the form field information and submit it. That data is then saved in the database.
 
 4. Editing: Doctors/Providers (users) can edit patient information.
 
@@ -67,7 +67,7 @@ The application provides the following user (doctor/provider) scenarios:
 1. Has at least 3 tables
 2. Contains at least 1 one:many relationship between tables
 3. Tables contain data
-4. Connects to server
+4. Connects to the server
 5. Server
 6. Uses an ORM (such as Hibernate)
 7. Uses DAO (Data Access Object) design
@@ -93,7 +93,7 @@ The application provides the following user (doctor/provider) scenarios:
 - Java 11+
 - Spring Boot
 
-To have this app running on your local computer, please follow the below steps:
+To have this app running on your local computer, please follow the steps below:
 
 Clone repository:
 
@@ -101,12 +101,12 @@ Clone repository:
 $ git clone https://github.com/kevinptx/patientApp.git
 ```
 
-Create new backend server:
+Create a new backend server:
 
-Create a free database server with AWS or use [pgAdmin 4](https://www.pgadmin.org/download/ "pgAdmin 4") on your computer to create and maintain a local postgreSQL database session
+Create a free database server with AWS or use [pgAdmin 4](https://www.pgadmin.org/download/ "pgAdmin 4") on your computer to create and maintain a local PostgreSQL database session
 
 
-Update application properties file:
+Update the application properties file:
 
 ```
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
@@ -141,7 +141,7 @@ Navigate to `localhost:8080/home.html`
 
 ## About Kevin Peery
 
-Kevin Peery is a software engineer and registered nurse in Houston, TX. He holds a bachelor's degree with double majors in business economics and history from the University of Texas at Austin, a Bachelor of Science in Nursing from the University of Texas at Arlington, and an Associate of Science in Computer Science. He has also completed several software engineering immersive programs. Kevin has had previous experience with the Database as a Service (DBAAS) team at a major oil and gas company where he focused on Angular development. He has completed training programs and has coding experience in langauges such as Java, Spring Boot, JavaScript, Angular, React, Ruby, Ruby on Rails, and C#. In addition to software development and active learning, Kevin enjoys running outdoors and staying healthy.
+Kevin Peery is a software engineer and registered nurse in Houston, TX. He holds a bachelor's degree with double majors in business economics and history from the University of Texas at Austin, a Bachelor of Science in Nursing from the University of Texas at Arlington, and an Associate of Science in Computer Science. He has also completed several software engineering immersive programs. Kevin has had previous experience with the Database as a Service (DBAAS) team at a major oil and gas company, where he focused on Angular development. He has completed training programs and has coding experience in languages such as Java, Spring Boot, JavaScript, Angular, React, Ruby, Ruby on Rails, and C#. In addition to software development and active learning, Kevin enjoys running outdoors and staying healthy.
 
 Connect with Kevin: 
 <p><a href="https://www.linkedin.com/in/kevin-peery/">
